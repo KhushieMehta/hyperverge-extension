@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Integrated Widgets</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="main-container">
+        <!-- Left Section -->
+        <div class="left-section">
+            <div class="clock" id="clock">00:00:00</div>
+            <div class="timer">
+                <h1>Pomodoro Timer</h1>
+                <div id="timeDisplay">25:00</div>
+                <div class="controls">
+                    <label for="workMinutesInput">Work:</label>
+                    <input type="number" id="workMinutesInput" min="1" value="25" />
+                    <label for="breakMinutesInput">Break:</label>
+                    <input type="number" id="breakMinutesInput" min="1" value="5" />
+                    <button id="startButton">Start Work</button>
+                    <button id="resetButton">Reset</button>
+                </div>
+                <button id="changeBgButton">Change Background</button>
+            </div>
+        </div>
+
+        <!-- Right Section (Widgets) -->
+        <div class="right-section">
+            <div class="widget">
+              <div class="containerBox">
+                <div class="todo-widget">
+                    <div class="title"><h2>Todo List</h2></div>
+                    <div class="tasks">
+                        <div class="list">
+                            <!-- Tasks will be dynamically inserted here -->
+                        </div>
+                    </div>
+                    <div class="add-task">
+                        <input id="taskInput" type="text" placeholder="Enter your task">
+                        <button class="add">Add Task</button>
+                    </div>
+                </div>
+            </div>
+            
+            </div>
+
+            <div class="widget">
+                <div class="title"><h2>Weather and Pollution</h2></div>
+                <div class="location">
+                    <div>Location</div>
+                    <input type="text" id="location" name="location">
+                    <button id="query-btn" class="query-btn">Get Info</button>
+                </div>
+                <div id="loading" style="display: none;">Loading...</div>
+                <div id="weather-info" class="hidden"></div>
+            </div>
+
+            <div class="widget book">
+              <div class="book">
+                <div id="quote-container">
+                    <div class="page">
+                        <p id="quote">Quote of the Day</p>
+                    </div>
+                </div>
+                <button id="fetch-quote-button">Get Quote</button>
+            </div>
+            
+            </div>
+
+            <div class="widget">
+                <div class="slides-widget-container">
+                    <iframe class="slides-frame" src="https://docs.google.com/presentation/d/1H755JCbXwxqGIq8D7oeOuP5QW8sbHsdI/edit#slide=id.p1"></iframe>
+                </div>
+            </div>
+
+            <div class="widget">
+                <div class="sheets-widget-container">
+                    <iframe class="sheets-frame" src="https://docs.google.com/spreadsheets/d/1AW3YZu7iZLweO7L1d-PbCwHJmXcDh2Pri8hyiwBRbJ0/edit?usp=sharing"></iframe>
+                </div>
+            </div>
+
+            <div class="widget">
+                <div class="form-widget-container">
+                    <iframe class="form-frame" src="https://docs.google.com/forms/d/e/1FAIpQLSduxZmuhamWqPUCyF20mVhqH_fFm1RktQIExsagyt0IinsQug/viewform?usp=sf_link"></iframe>
+                </div>
+            </div>
+
+            <div class="widget">
+              <div class="containerBox">
+                <div class="box issue-tracker">
+                    <div class="title"><h2>Issue Tracker</h2></div>
+                    <form id="issueForm">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required />
+                        
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required />
+                        
+                        <label for="title">Issue Title:</label>
+                        <input type="text" id="title" name="title" required />
+                        
+                        <label for="description">Description:</label>
+                        <textarea id="description" name="description" rows="4" required></textarea>
+                        
+                        <button type="submit">Submit Issue</button>
+                    </form>
+                    <div id="responseMessage"></div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="taskManager.js"></script>
+    <script src="weather.js"></script>
+    <script src="timer.js"></script>
+    <script src="quote.js"></script>
+    <script src="poll.js"></script>
+    <script src="announcement.js"></script>
+    <script src="issueTracker.js"></script>
+    <script src="backgroundChanger.js"></script>
+    <script src="clock.js"></script>
+</body>
+</html>

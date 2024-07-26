@@ -1,0 +1,381 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+}
+
+body {
+  background: #fef0f0;
+  color: #333;
+}
+
+.main-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+.left-section, .right-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.left-section {
+  flex: 1;
+}
+
+.right-section {
+  flex: 2;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+/* To-Do List Widget Styles */
+.todo-widget {
+  background: rgba(255, 240, 245, 0.95); /* Light pastel pink background */
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  padding: 25px;
+  text-align: center;
+  border: 2px solid #ffb6c1;
+}
+
+.todo-widget .title h2 {
+  color: #ff69b4; /* Vibrant pink for the title */
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.tasks {
+  max-height: 300px; /* Restricting height */
+  overflow-y: auto; /* Scrollable */
+  padding: 10px;
+  background: #fff0f5; /* Very light pink */
+  border-radius: 12px;
+  border: 1px solid #ffb6c1;
+  margin-bottom: 15px;
+}
+
+.tasks .list {
+  list-style-type: none;
+}
+
+.tasks .task {
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  background-color: #ffe4e1;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ffb6c1;
+}
+
+.tasks .task:last-of-type {
+  margin-bottom: 0;
+}
+
+.tasks .task .task-text {
+  font-size: 1rem;
+  color: #333;
+}
+
+.tasks .task .close {
+  border: none;
+  background-color: transparent;
+  font-weight: bold;
+  cursor: pointer;
+  color: #ff69b4;
+  font-size: 1.2rem;
+}
+
+.add-task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add-task input {
+  width: calc(100% - 110px); /* Adjusted width for balance */
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid #ffb6c1;
+  font-size: 1rem;
+  margin-right: 10px;
+}
+
+.add-task .add {
+  padding: 10px 20px;
+  border-radius: 12px;
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-task .add:hover {
+  background-color: #ff85c0;
+}
+/* Quote of the Day Styles */
+.book {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  max-width: 400px;
+  margin: auto;
+  border: 2px solid #ffe4e1;
+  text-align: center;
+  position: relative;
+}
+
+#quote-container {
+  padding: 20px;
+  background: linear-gradient(145deg, #ffe4e1, #fff0f5);
+  border-radius: 12px;
+  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+  position: relative;
+}
+
+#quote {
+  font-size: 1.4rem;
+  font-style: italic;
+  color: #ff69b4; /* Vibrant pink */
+  font-family: 'Georgia', serif; /* Serif font for a more classic look */
+  margin: 0;
+}
+
+#fetch-quote-button {
+  padding: 10px 20px;
+  border-radius: 12px;
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1rem;
+  position: relative;
+  top: -10px;
+}
+
+#fetch-quote-button:hover {
+  background-color: #ff85c0;
+}
+
+
+/* Clock Style */
+.clock {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ff69b4;
+  background: #fff0f5;
+  border: 3px dashed #ff69b4;
+  border-radius: 16px;
+  padding: 15px 25px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.clock:hover {
+  transform: scale(1.05);
+}
+
+/* Widget Styles */
+.widget {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 25px;
+  text-align: center;
+  border: 2px solid #ffe4e1;
+}
+
+.book, .form-container {
+  border: 2px solid #ffb6c1;
+  backdrop-filter: blur(12px);
+}
+
+.title {
+  font-size: 1.8rem;
+  color: #ff69b4;
+  margin-bottom: 10px;
+}
+
+button, .add, .query-btn {
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  background-color: #ff69b4;
+  color: white;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover, .add:hover, .query-btn:hover {
+  background-color: #ff85c0;
+  transform: scale(1.05);
+}
+
+button:active, .add:active, .query-btn:active {
+  transform: scale(0.95);
+}
+
+/* Inputs */
+input[type="text"], input[type="number"] {
+  width: calc(100% - 50px);
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+/* Timer Styles */
+.timer h1 {
+  color: #ff69b4;
+  font-size: 1.8rem;
+}
+
+#timeDisplay {
+  font-size: 4.5rem;
+  color: #ff69b4;
+  margin: 15px 0;
+}
+
+.controls {
+  margin-top: 25px;
+  margin-bottom: 40px;
+}
+
+/* Larger Widget Styles (Selective) */
+.slides-widget-container, 
+.form-widget-container {
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid #ffb6c1;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  backdrop-filter: blur(12px);
+  padding: 35px;
+  height: 400px;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.slides-frame, 
+.form-frame {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Regular Widget Styles */
+.sheets-widget-container, 
+.issue-tracker {
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid #ffb6c1;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  backdrop-filter: blur(12px);
+  padding: 25px;
+  height: 300px;
+  max-width: 60%;
+  margin: 0 auto;
+}
+
+.sheets-frame, 
+.issue-frame {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+/* Issue Tracker Styles */
+.issue-tracker {
+  background: rgba(255, 255, 255, 0.95); /* Light background with slight transparency */
+  border-radius: 15px; /* Slightly smaller border radius */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
+  padding: 20px; /* Moderate padding for balance */
+  border: 2px solid #ffb6c1; /* Soft pink border */
+  margin: auto;
+  max-width: 500px; /* Reduced width for a more compact form */
+  box-sizing: border-box; /* Ensure padding and border are included in the width */
+}
+
+.issue-tracker form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* Moderate space between elements */
+}
+
+.issue-tracker label {
+  font-size: 0.9rem; /* Smaller font size for labels */
+  color: #ff69b4; /* Vibrant pink */
+  margin-bottom: 6px;
+}
+
+.issue-tracker input[type="text"],
+.issue-tracker input[type="email"],
+.issue-tracker textarea {
+  padding: 8px; /* Smaller padding */
+  border-radius: 8px; /* Smaller border-radius */
+  border: 1px solid #ffb6c1; /* Soft pink border */
+  font-size: 0.9rem; /* Smaller font size */
+  background-color: #fff; /* White background for contrast */
+  color: #333; /* Dark text for readability */
+}
+
+.issue-tracker textarea {
+  resize: vertical; /* Allow vertical resizing */
+  min-height: 80px; /* Smaller minimum height for textarea */
+}
+
+.issue-tracker button[type="submit"] {
+  padding: 8px 16px; /* Smaller padding for button */
+  border-radius: 8px; /* Smaller border-radius for button */
+  border: none;
+  background-color: #ff69b4; /* Vibrant pink background */
+  color: white;
+  font-size: 0.9rem; /* Smaller font size */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-transform: uppercase; /* Uppercase text for emphasis */
+}
+
+.issue-tracker button[type="submit"]:hover {
+  background-color: #ff85c0; /* Lighter pink on hover */
+  transform: scale(1.03); /* Slightly enlarge button */
+}
+
+.issue-tracker button[type="submit"]:active {
+  transform: scale(0.97); /* Slightly shrink button */
+}
+
+#responseMessage {
+  margin-top: 12px; /* Smaller margin */
+  font-size: 0.9rem; /* Smaller font size */
+  color: #ff69b4; /* Consistent color with form elements */
+  text-align: center;
+}
+
+
+.bg1 {
+  background-image: url('image1.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.bg2 {
+  background-image: url('image.jpg');
+  background-size: cover;
+  background-position: center;
+}

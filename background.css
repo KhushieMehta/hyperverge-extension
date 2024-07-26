@@ -1,0 +1,11 @@
+.bg1 {
+    background-image: url('/image1.jpeg');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .bg2 {
+    background-image: url('/image.jpeg');
+    background-size: cover;
+    background-position: center;
+  }
