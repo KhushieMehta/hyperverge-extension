@@ -9,6 +9,8 @@
 body {
   background: #fef0f0;
   color: #333;
+  height: 1500px;
+  width: 1500px;
 }
 
 .main-container {

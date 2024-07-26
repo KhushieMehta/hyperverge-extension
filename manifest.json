@@ -1,5 +1,5 @@
 {
-    "name": "My first Ext.",
+    "name": "Hyperverge Ext.",
     "description": "Build an Extension!",
     "version": "1.0",
     "manifest_version": 3 ,
@@ -13,7 +13,7 @@
    "content_scripts": [
         {
             "matches": ["<all_urls>"],
-            "js": ["taskManager.js", "weather.js"]
+            "js": ["taskManager.js", "weather.js","timer.js","backgroundChanger.js","announcement.js","poll.js","clock.js"]
         }
     ]
 }
