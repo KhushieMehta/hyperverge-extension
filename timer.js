@@ -4,8 +4,8 @@ const resetButton = document.getElementById('resetButton');
 const workMinutesInput = document.getElementById('workMinutesInput');
 const breakMinutesInput = document.getElementById('breakMinutesInput');
 
-let timer;
-let timeLeft;
+let timer=0;
+let timeLeft=0;
 let isBreak = false;
 
 function updateDisplay() {
